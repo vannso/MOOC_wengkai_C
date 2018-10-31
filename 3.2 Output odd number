@@ -7,13 +7,11 @@ int main()
 
 	scanf("%d", &input);
 
-	for(i=1; i<=input; i += 2)
+	for(i=1; i<=input-2; i+=2)
 	{
-	    if(i < input - 1)
 		printf("%d ", i);
-		else
-		printf("%d", i);
 	}
+	printf("%d", i);
 
 	return 0;
 }
