@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+int main()
+{
+	int i, input, output;
+
+	scanf("%d", &input);
+
+	for(i=1; i<=input; i += 2)
+	{
+	    if(i < input - 1)
+		printf("%d ", i);
+		else
+		printf("%d", i);
+	}
+
+	return 0;
+}
