@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+
+int main()
+{
+	int BJT, UTC, B_hour, B_min, U_hour, U_min;
+
+	scanf("%d", &BJT);
+
+	B_hour = BJT / 100;
+	B_min = BJT % 100;
+
+	U_min = B_min;
+	U_hour = B_hour - 8;
+
+	if(U_hour < 0)
+	{
+		U_hour += 24;
+	}
+
+	UTC = U_hour * 100 + U_min;
+
+	printf("%d\n", UTC);
+
+	return 0;
+}
