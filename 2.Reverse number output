@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main()
+{
+	int input, output;
+	
+	scanf("%d", &input); //get input
+	
+	while(input > 0)
+	{
+		output = input % 10;//get minimum
+		if (output >0)
+		    {
+	    	printf("%d", output);//output minimum when minimum greater than 0
+		    }
+		input /= 10;//remove the previous minimum and turn sub-small to minimum
+	}
+	
+	return 0;
+}
