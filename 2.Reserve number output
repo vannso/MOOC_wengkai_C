@@ -46,16 +46,16 @@ int main()
 {
 	int input, output;
 	
-	scanf("%d", &input);
+	scanf("%d", &input); //获得输入
 	
 	while(input > 0)
 	{
-		output = input % 10;
+		output = input % 10;//获取最小位
 		if (output >0)
 		    {
-	    	printf("%d", output);
+	    	printf("%d", output);//将最小位倒序输出，为0则不输出
 		    }
-		input /= 10;
+		input /= 10;//将次小位变成最小位
 	}
 	
 	return 0;
