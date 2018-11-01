@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	int i = 0, j = 0, input = 0;
+
+	int temple[7]={0,};
+	char* str[10]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
+
+	scanf("%d", &input);
+
+		if(input < 0)
+		{
+			printf("fu ");
+			input = -input;
+		}
+    
+		for( i = 0; ; i++)//Reverse the order of input
+		{
+			temple[i] = input%10;
+			input /= 10;
+			if(input == 0)
+				break;
+		}
+
+		for(i; i >= 0; i-- ) // output the result
+		{	
+			j = temple[i];
+			printf("%s", str[j]);
+			if(i != 0)
+			printf(" ");
+		}
+
+    return 0;
+}
