@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+int main(){
+	int dividend, divisor, i, output;
+
+	scanf("%d/%d", &dividend, &divisor); 
+
+	printf("0.");
+
+	dividend *= 10; // for the first time to divid
+
+	for( i = 0; i < 200; i++ )
+	{
+		output = dividend / divisor;
+		printf("%d", output); 
+		dividend = dividend % divisor * 10;
+		if( dividend == 0 )
+		{
+			break;
+		}
+
+	}
+
+	printf("\n");
+	
+	return 0;
+}
