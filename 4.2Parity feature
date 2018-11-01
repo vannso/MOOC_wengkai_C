@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int input, cnt = 1, units = 0, decimal = 0;
+    
+    scanf("%d", &input);
+    
+    while(input != 0)
+    {
+        units = input % 10;//take out the units of input
+        if(units%2 == cnt%2) // same parity
+        {
+            decimal += pow(2,cnt-1);
+        }
+        input = input/10; //remove the last number(units)
+        cnt++;
+    }
+    printf("%d",decimal);
+    return 0;
+}
