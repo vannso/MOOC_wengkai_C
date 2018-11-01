@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int NumberStart, NumberEnd, i, j, PrimeNumber = 1, sum = 0;
+
+    scanf("%d%d", &NumberStart, &NumberEnd);
+
+    for(i=2; ; i++) 
+    {
+        for(j=2; j<i ;j++) //there isn't include the first primenumber 2;
+        {
+            if(i%j == 0) 
+            {   
+                break; 
+            }
+            if(j == i-1) 
+            {
+              
+              PrimeNumber++;
+              if(PrimeNumber >= NumberStart) // Start to accumulate
+              {
+                sum += i;
+              }
+            }           
+        }
+        if(PrimeNumber >= NumberEnd)// End of accumulation
+        {
+            break;
+        }
+    }
+    if(NumberStart == 1) // there need to add the value of the first primenumber 2
+    {
+        sum += 2;
+    }
+
+    printf("%d\n",sum); 
+
+    return 0;
+}
